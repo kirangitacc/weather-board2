@@ -1,0 +1,431 @@
+/* Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, skyblue, #cffcf1);
+  color: #222;
+}
+
+/* Layout Containers */
+.bg1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+}
+.bg4 {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 16px 24px;
+  scroll-snap-type: x mandatory;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.bg4::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .bg4 {
+    padding: 12px 16px;
+    gap: 12px;
+    width: 100%;
+  }
+}
+
+
+.bg2 {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 12px 24px;
+  width: 90%;
+  scroll-snap-type: x mandatory;
+}
+
+.bg2::-webkit-scrollbar {
+  display: none;
+}
+
+/* Search Bar */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: #222;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+/* Header & Buttons */
+h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+  text-align: center;
+}
+
+.home {
+  background-color: orangered;
+  color: white;
+  font-size: 16px;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* Upper Container */
+.upper {
+  padding: 10px;
+  width: 100%;
+}
+
+.weather-location-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.weather-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.weather-card {
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  padding: 12px;
+  width: 160px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.card-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  word-break: break-word;
+}
+
+.weather-icon-img {
+  width: 60px;
+  height: auto;
+  margin-top: 8px;
+}
+
+/* Daily Forecast Cards */
+.mini1 {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffcc;
+  border: 3px solid goldenrod;
+  border-radius: 16px;
+  padding: 16px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.mini1:hover {
+  transform: translateY(-6px);
+}
+
+.ph {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.sun {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 2px 0;
+}
+
+.icon {
+  width: 48px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.po, .po1 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pi {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+sup {
+  font-size: 0.6em;
+  vertical-align: top;
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 767px) {
+  .weather-card {
+    width: 45%;
+    padding: 10px;
+  }
+
+  .card-label {
+    font-size: 0.75rem;
+  }
+
+  .card-value {
+    font-size: 1rem;
+  }
+
+  .weather-location-title {
+    font-size: 1.5rem;
+  }
+
+  .mini1 {
+    width: 180px;
+    padding: 12px;
+  }
+
+  .ph {
+    font-size: 0.95rem;
+  }
+
+  .sun {
+    font-size: 0.8rem;
+  }
+
+  .po, .po1 {
+    font-size: 0.95rem;
+  }
+
+  .pi {
+    font-size: 0.75rem;
+  }
+
+  .icon {
+    width: 40px;
+  }
+
+  .search-input-container {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .home {
+    font-size: 16px;
+    padding: 6px 12px;
+    height: auto;
+  }
+}
+
+.daily-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  list-style-type: none;
+}
+
+.daily-card:hover {
+  transform: translateY(-6px);
+}
+
+.daily-date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0077b6;
+  margin-bottom: 8px;
+}
+
+.daily-times {
+  font-size: 0.8rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.daily-time {
+  font-size: 1.5rem;
+  color: #444;
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.daily-time::before {
+  font-size: 1.4rem; /* Enlarges emoji */
+}
+
+
+.daily-icon {
+  width: 48px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.daily-condition {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.daily-temp {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.temp-max {
+  color: #d32f2f;
+}
+
+.temp-min {
+  color: #1976d2;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 767px) {
+  .daily-card {
+    width: 200px;
+    padding: 12px;
+  }
+
+  .daily-date {
+    font-size: 0.9rem;
+  }
+
+  .daily-temp {
+    font-size: 1rem;
+  }
+
+  .daily-icon {
+    width: 40px;
+  }
+}
+
+.hour-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background-color: #fff3e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 12px;
+  width: 140px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.hour-card:hover {
+  transform: translateY(-4px);
+}
+
+.hour-time {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.hour-icon {
+  width: 36px;
+  height: auto;
+  margin: 6px 0;
+}
+
+.hour-temp {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.hour-humidity {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 767px) {
+  .hour-card {
+    width: 120px;
+    padding: 10px;
+  }
+
+  .hour-temp {
+    font-size: 1rem;
+  }
+
+  .hour-humidity {
+    font-size: 0.75rem;
+  }
+
+  .hour-icon {
+    width: 30px;
+  }
+}
